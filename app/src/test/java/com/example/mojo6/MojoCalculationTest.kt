@@ -5,7 +5,7 @@ import org.junit.Test
 import org.junit.Assert.*
 
 class MojoCalculationTest {
-    private val samples = arrayOf(
+    private val samples = listOf(
         MojoSample(
             SensorValue(10034, 23.5),
             SensorValue(10035, 12.3),

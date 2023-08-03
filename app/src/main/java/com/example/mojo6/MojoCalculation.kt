@@ -1,6 +1,6 @@
 package com.example.mojo6
 
-class MojoCalculation(private val samples: Array<MojoSample>) {
+class MojoCalculation(private val samples: List<MojoSample>) {
 
     val numberOfSamples: Int
         get() = samples.size
