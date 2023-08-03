@@ -5,9 +5,9 @@ class MojoCalculation(private val samples: Array<MojoSample>) {
     val numberOfSamples: Int
         get() = samples.size
 
-    val averageSampleWeight: Double
-        get() = samples.map { it.sampleWeight }.average()
-
-    val earliestTimeStamp: Long
-        get() = samples.minOf { it.timeStamp }
+    val averageSampleWeight: SensorValue<Double>
+        get() = SensorValue(
+            samples.minOf { it.sampleWeight.timeStamp },
+            samples.map { it.sampleWeight.value }.average()
+        )
 }
